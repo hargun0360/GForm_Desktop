@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class reateSubmissionForm
+Partial Class CreateSubmissionForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,11 +23,11 @@ Partial Class reateSubmissionForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Button2 = New Button()
-        TextBox5 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        txtStopwatch = New TextBox()
+        txtGithub = New TextBox()
+        txtPhone = New TextBox()
+        txtEmail = New TextBox()
+        txtName = New TextBox()
         Label6 = New Label()
         Label5 = New Label()
         Label4 = New Label()
@@ -46,42 +46,42 @@ Partial Class reateSubmissionForm
         Button2.Text = "SUBMIT (CTRL + S)"
         Button2.UseVisualStyleBackColor = True
         ' 
-        ' TextBox5
+        ' txtStopwatch
         ' 
-        TextBox5.Location = New Point(457, 345)
-        TextBox5.Name = "TextBox5"
-        TextBox5.ReadOnly = True
-        TextBox5.Size = New Size(208, 27)
-        TextBox5.TabIndex = 23
+        txtStopwatch.Location = New Point(457, 345)
+        txtStopwatch.Name = "txtStopwatch"
+        txtStopwatch.ReadOnly = True
+        txtStopwatch.Size = New Size(208, 27)
+        txtStopwatch.TabIndex = 23
         ' 
-        ' TextBox4
+        ' txtGithub
         ' 
-        TextBox4.Location = New Point(426, 301)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(239, 27)
-        TextBox4.TabIndex = 22
+        txtGithub.Location = New Point(426, 301)
+        txtGithub.Name = "txtGithub"
+        txtGithub.Size = New Size(239, 27)
+        txtGithub.TabIndex = 22
         ' 
-        ' TextBox3
+        ' txtPhone
         ' 
-        TextBox3.Location = New Point(426, 259)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(239, 27)
-        TextBox3.TabIndex = 21
+        txtPhone.Location = New Point(426, 259)
+        txtPhone.Name = "txtPhone"
+        txtPhone.Size = New Size(239, 27)
+        txtPhone.TabIndex = 21
         ' 
-        ' TextBox2
+        ' txtEmail
         ' 
-        TextBox2.Location = New Point(426, 214)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(239, 27)
-        TextBox2.TabIndex = 20
+        txtEmail.Location = New Point(426, 214)
+        txtEmail.Name = "txtEmail"
+        txtEmail.Size = New Size(239, 27)
+        txtEmail.TabIndex = 20
         ' 
-        ' TextBox1
+        ' txtName
         ' 
-        TextBox1.BackColor = SystemColors.ButtonHighlight
-        TextBox1.Location = New Point(426, 173)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(239, 27)
-        TextBox1.TabIndex = 19
+        txtName.BackColor = SystemColors.ButtonHighlight
+        txtName.Location = New Point(426, 169)
+        txtName.Name = "txtName"
+        txtName.Size = New Size(239, 27)
+        txtName.TabIndex = 19
         ' 
         ' Label6
         ' 
@@ -145,18 +145,18 @@ Partial Class reateSubmissionForm
         Button3.Text = "TOGGLE STOPWATCH (CTRL + T)"
         Button3.UseVisualStyleBackColor = True
         ' 
-        ' reateSubmissionForm
+        ' CreateSubmissionForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(942, 626)
         Controls.Add(Button3)
         Controls.Add(Button2)
-        Controls.Add(TextBox5)
-        Controls.Add(TextBox4)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        Controls.Add(txtStopwatch)
+        Controls.Add(txtGithub)
+        Controls.Add(txtPhone)
+        Controls.Add(txtEmail)
+        Controls.Add(txtName)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Label4)
@@ -164,18 +164,18 @@ Partial Class reateSubmissionForm
         Controls.Add(Label2)
         Controls.Add(Label1)
         KeyPreview = True
-        Name = "reateSubmissionForm"
-        Text = " "
+        Name = "CreateSubmissionForm"
+        Text = "j"
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtStopwatch As TextBox
+    Friend WithEvents txtGithub As TextBox
+    Friend WithEvents txtPhone As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtName As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label

@@ -28,11 +28,11 @@ Partial Class ViewSubmissionsForm
         Label4 = New Label()
         Label5 = New Label()
         Label6 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        TextBox4 = New TextBox()
-        TextBox5 = New TextBox()
+        txtName = New TextBox()
+        txtEmail = New TextBox()
+        txtPhone = New TextBox()
+        txtGithub = New TextBox()
+        txtStopwatch = New TextBox()
         Button1 = New Button()
         Button2 = New Button()
         SuspendLayout()
@@ -91,46 +91,46 @@ Partial Class ViewSubmissionsForm
         Label6.TabIndex = 5
         Label6.Text = "Stopwatch time "
         ' 
-        ' TextBox1
+        ' txtName
         ' 
-        TextBox1.BackColor = SystemColors.Control
-        TextBox1.Location = New Point(419, 128)
-        TextBox1.Name = "TextBox1"
-        TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(239, 27)
-        TextBox1.TabIndex = 6
+        txtName.BackColor = SystemColors.Control
+        txtName.Location = New Point(419, 128)
+        txtName.Name = "txtName"
+        txtName.ReadOnly = True
+        txtName.Size = New Size(239, 27)
+        txtName.TabIndex = 6
         ' 
-        ' TextBox2
+        ' txtEmail
         ' 
-        TextBox2.Location = New Point(419, 169)
-        TextBox2.Name = "TextBox2"
-        TextBox2.ReadOnly = True
-        TextBox2.Size = New Size(239, 27)
-        TextBox2.TabIndex = 7
+        txtEmail.Location = New Point(419, 169)
+        txtEmail.Name = "txtEmail"
+        txtEmail.ReadOnly = True
+        txtEmail.Size = New Size(239, 27)
+        txtEmail.TabIndex = 7
         ' 
-        ' TextBox3
+        ' txtPhone
         ' 
-        TextBox3.Location = New Point(419, 214)
-        TextBox3.Name = "TextBox3"
-        TextBox3.ReadOnly = True
-        TextBox3.Size = New Size(239, 27)
-        TextBox3.TabIndex = 8
+        txtPhone.Location = New Point(419, 214)
+        txtPhone.Name = "txtPhone"
+        txtPhone.ReadOnly = True
+        txtPhone.Size = New Size(239, 27)
+        txtPhone.TabIndex = 8
         ' 
-        ' TextBox4
+        ' txtGithub
         ' 
-        TextBox4.Location = New Point(419, 256)
-        TextBox4.Name = "TextBox4"
-        TextBox4.ReadOnly = True
-        TextBox4.Size = New Size(239, 27)
-        TextBox4.TabIndex = 9
+        txtGithub.Location = New Point(419, 256)
+        txtGithub.Name = "txtGithub"
+        txtGithub.ReadOnly = True
+        txtGithub.Size = New Size(239, 27)
+        txtGithub.TabIndex = 9
         ' 
-        ' TextBox5
+        ' txtStopwatch
         ' 
-        TextBox5.Location = New Point(419, 300)
-        TextBox5.Name = "TextBox5"
-        TextBox5.ReadOnly = True
-        TextBox5.Size = New Size(239, 27)
-        TextBox5.TabIndex = 10
+        txtStopwatch.Location = New Point(419, 300)
+        txtStopwatch.Name = "txtStopwatch"
+        txtStopwatch.ReadOnly = True
+        txtStopwatch.Size = New Size(239, 27)
+        txtStopwatch.TabIndex = 10
         ' 
         ' Button1
         ' 
@@ -157,11 +157,11 @@ Partial Class ViewSubmissionsForm
         ClientSize = New Size(966, 650)
         Controls.Add(Button2)
         Controls.Add(Button1)
-        Controls.Add(TextBox5)
-        Controls.Add(TextBox4)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        Controls.Add(txtStopwatch)
+        Controls.Add(txtGithub)
+        Controls.Add(txtPhone)
+        Controls.Add(txtEmail)
+        Controls.Add(txtName)
         Controls.Add(Label6)
         Controls.Add(Label5)
         Controls.Add(Label4)
@@ -181,11 +181,11 @@ Partial Class ViewSubmissionsForm
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtPhone As TextBox
+    Friend WithEvents txtGithub As TextBox
+    Friend WithEvents txtStopwatch As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
 End Class
