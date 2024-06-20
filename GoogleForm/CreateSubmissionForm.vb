@@ -2,16 +2,19 @@
 Imports System.Text
 Imports System.Threading.Tasks
 Imports Newtonsoft.Json
-
+Imports System.Diagnostics
 
 Imports GoogleForm.Submission
 
 Public Class CreateSubmissionForm
     Private stopwatch As Stopwatch = New Stopwatch()
     Private ReadOnly client As HttpClient
+    Private WithEvents timer As Timer
 
     Public Sub New()
         InitializeComponent()
+        timer = New Timer()
+        timer.Interval = 1000
         client = New HttpClient()
         client.BaseAddress = New Uri("http://localhost:3000/")
         client.DefaultRequestHeaders.Accept.Clear()
@@ -26,12 +29,18 @@ Public Class CreateSubmissionForm
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click, MyBase.Click
         If stopwatch.IsRunning Then
             stopwatch.Stop()
-            Controls("Button3").Text = "Resume"
+            timer.Stop()
+            Button3.Text = "Resume"
         Else
             stopwatch.Start()
-            Controls("Button3").Text = "Pause"
+            timer.Start()
+            Button3.Text = "Pause"
         End If
         Controls("txtStopwatch").Text = stopwatch.Elapsed.ToString("hh\:mm\:ss")
+    End Sub
+
+    Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles timer.Tick
+        txtStopwatch.Text = stopwatch.Elapsed.ToString("hh\:mm\:ss")
     End Sub
 
     Private Async Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click, MyBase.Click
