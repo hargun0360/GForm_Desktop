@@ -36,6 +36,7 @@ Public Class ViewSubmissionsForm
             Me.Controls("txtPhone").Text = submission.Phone
             Me.Controls("txtGithub").Text = submission.GithubLink
             Me.Controls("txtStopwatch").Text = submission.StopwatchTime
+            Me.Controls("Label1").Text = $"{submission.Name}, Slidely Task 2 - View Submission"
         Else
             Me.Controls("txtName").Text = ""
             Me.Controls("txtEmail").Text = ""
@@ -58,9 +59,9 @@ Public Class ViewSubmissionsForm
         Await DisplayCurrentSubmission()
     End Sub
 
-    Private Async Sub ViewSubmissionsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.KeyPreview = True
-        Me.Text = "John Doe, Slidely Task 2 - View Submissions"
+    Private Async Sub ViewSubmissionsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load, Label1.BindingContextChanged
+        KeyPreview = True
+        Text = "John Doe, Slidely Task 2 - View Submissions"
         Await DisplayCurrentSubmission()
     End Sub
 

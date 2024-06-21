@@ -40,54 +40,60 @@ Partial Class ViewSubmissionsForm
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(296, 46)
+        Label1.Font = New Font("STZhongsong", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(207, 58)
         Label1.Name = "Label1"
-        Label1.Size = New Size(322, 20)
+        Label1.Size = New Size(525, 23)
         Label1.TabIndex = 0
-        Label1.Text = "Hargun Singh, Slidely Task 2 - View Submission "
+        Label1.Text = "Hargun Singh, Slidely Task 2 - View Submission"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(276, 131)
+        Label2.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(276, 138)
         Label2.Name = "Label2"
-        Label2.Size = New Size(49, 20)
+        Label2.Size = New Size(50, 17)
         Label2.TabIndex = 1
         Label2.Text = "Name"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(276, 176)
         Label3.Name = "Label3"
-        Label3.Size = New Size(46, 20)
+        Label3.Size = New Size(50, 17)
         Label3.TabIndex = 2
         Label3.Text = "Email"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
+        Label4.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(259, 217)
         Label4.Name = "Label4"
-        Label4.Size = New Size(83, 20)
+        Label4.Size = New Size(92, 17)
         Label4.TabIndex = 3
         Label4.Text = "Phone num"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(230, 256)
+        Label5.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(217, 261)
         Label5.Name = "Label5"
-        Label5.Size = New Size(156, 20)
+        Label5.Size = New Size(182, 17)
         Label5.TabIndex = 4
         Label5.Text = "GitHub Link for Task 2 "
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(248, 303)
+        Label6.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(239, 310)
         Label6.Name = "Label6"
-        Label6.Size = New Size(117, 20)
+        Label6.Size = New Size(128, 17)
         Label6.TabIndex = 5
         Label6.Text = "Stopwatch time "
         ' 
@@ -134,27 +140,33 @@ Partial Class ViewSubmissionsForm
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(248, 385)
+        Button1.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(128))
+        Button1.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(217, 385)
         Button1.Name = "Button1"
+        Button1.Padding = New Padding(2)
         Button1.Size = New Size(184, 29)
         Button1.TabIndex = 11
         Button1.Text = "PREVIOUS (CTRL + P)"
-        Button1.UseVisualStyleBackColor = True
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(514, 385)
+        Button2.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        Button2.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Location = New Point(538, 385)
         Button2.Name = "Button2"
+        Button2.Padding = New Padding(2)
         Button2.Size = New Size(172, 29)
         Button2.TabIndex = 12
         Button2.Text = "NEXT (CTRL + N)"
-        Button2.UseVisualStyleBackColor = True
+        Button2.UseVisualStyleBackColor = False
         ' 
         ' ViewSubmissionsForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(966, 650)
+        ClientSize = New Size(935, 458)
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(txtStopwatch)

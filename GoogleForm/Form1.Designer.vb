@@ -30,29 +30,38 @@ Partial Class Form1
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(337, 189)
+        Label1.FlatStyle = FlatStyle.Flat
+        Label1.Font = New Font("STZhongsong", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(231, 143)
         Label1.Name = "Label1"
-        Label1.Size = New Size(265, 20)
+        Label1.Size = New Size(477, 23)
         Label1.TabIndex = 0
-        Label1.Text = "Hello Hargun, This is the Google Form "
+        Label1.Text = "Jhon Doe, Slidely Task 2 - Slidely Form App"
+        Label1.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' BtnViewSubmissions
         ' 
-        BtnViewSubmissions.Location = New Point(286, 246)
+        BtnViewSubmissions.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(128))
+        BtnViewSubmissions.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnViewSubmissions.Location = New Point(279, 207)
         BtnViewSubmissions.Name = "BtnViewSubmissions"
+        BtnViewSubmissions.Padding = New Padding(2)
         BtnViewSubmissions.Size = New Size(353, 29)
         BtnViewSubmissions.TabIndex = 1
         BtnViewSubmissions.Text = "VIEW SUBMISSIONS (CTRL + V)"
-        BtnViewSubmissions.UseVisualStyleBackColor = True
+        BtnViewSubmissions.UseVisualStyleBackColor = False
         ' 
         ' BtnCreateSubmission
         ' 
-        BtnCreateSubmission.Location = New Point(286, 301)
+        BtnCreateSubmission.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        BtnCreateSubmission.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnCreateSubmission.Location = New Point(279, 262)
         BtnCreateSubmission.Name = "BtnCreateSubmission"
+        BtnCreateSubmission.Padding = New Padding(2)
         BtnCreateSubmission.Size = New Size(353, 29)
         BtnCreateSubmission.TabIndex = 2
         BtnCreateSubmission.Text = "CREATE NEW SUBMISSION (CTRL + N)"
-        BtnCreateSubmission.UseVisualStyleBackColor = True
+        BtnCreateSubmission.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 
@@ -64,6 +73,7 @@ Partial Class Form1
         Controls.Add(Label1)
         KeyPreview = True
         Name = "Form1"
+        Padding = New Padding(5)
         Text = "Form1"
         ResumeLayout(False)
         PerformLayout()

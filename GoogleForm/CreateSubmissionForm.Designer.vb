@@ -39,12 +39,14 @@ Partial Class CreateSubmissionForm
         ' 
         ' Button2
         ' 
+        Button2.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        Button2.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.Location = New Point(212, 430)
         Button2.Name = "Button2"
         Button2.Size = New Size(453, 29)
         Button2.TabIndex = 25
         Button2.Text = "SUBMIT (CTRL + S)"
-        Button2.UseVisualStyleBackColor = True
+        Button2.UseVisualStyleBackColor = False
         ' 
         ' txtStopwatch
         ' 
@@ -94,56 +96,63 @@ Partial Class CreateSubmissionForm
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(237, 301)
+        Label5.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(212, 301)
         Label5.Name = "Label5"
-        Label5.Size = New Size(156, 20)
+        Label5.Size = New Size(182, 17)
         Label5.TabIndex = 17
         Label5.Text = "GitHub Link for Task 2 "
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
+        Label4.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(266, 262)
         Label4.Name = "Label4"
-        Label4.Size = New Size(83, 20)
+        Label4.Size = New Size(92, 17)
         Label4.TabIndex = 16
         Label4.Text = "Phone num"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(283, 221)
         Label3.Name = "Label3"
-        Label3.Size = New Size(46, 20)
+        Label3.Size = New Size(50, 17)
         Label3.TabIndex = 15
         Label3.Text = "Email"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(283, 176)
         Label2.Name = "Label2"
-        Label2.Size = New Size(49, 20)
+        Label2.Size = New Size(50, 17)
         Label2.TabIndex = 14
         Label2.Text = "Name"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(303, 91)
+        Label1.Font = New Font("STZhongsong", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(198, 86)
         Label1.Name = "Label1"
-        Label1.Size = New Size(333, 20)
+        Label1.Size = New Size(552, 23)
         Label1.TabIndex = 13
         Label1.Text = "Hargun Singh, Slidely Task 2 - Create Submission "
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(198, 345)
+        Button3.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(128))
+        Button3.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(134))
+        Button3.Location = New Point(173, 345)
         Button3.Name = "Button3"
-        Button3.Size = New Size(241, 29)
+        Button3.Size = New Size(266, 29)
         Button3.TabIndex = 26
         Button3.Text = "TOGGLE STOPWATCH (CTRL + T)"
-        Button3.UseVisualStyleBackColor = True
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' CreateSubmissionForm
         ' 
