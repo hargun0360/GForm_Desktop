@@ -14,10 +14,10 @@ Class Form1
         createForm.Show()
     End Sub
 
-    Private Sub MainForm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+    Private Sub Form1_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.Control AndAlso e.KeyCode = Keys.V Then
             BtnViewSubmissions.PerformClick()
-        ElseIf e.Control AndAlso e.KeyCode = Keys.C Then
+        ElseIf e.Control AndAlso e.KeyCode = Keys.N Then
             BtnCreateSubmission.PerformClick()
         End If
     End Sub

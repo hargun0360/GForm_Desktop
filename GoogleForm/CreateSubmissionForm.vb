@@ -92,5 +92,8 @@ Public Class CreateSubmissionForm
         If e.Control AndAlso e.KeyCode = Keys.S Then
             Button2.PerformClick()
         End If
+        If e.Control AndAlso e.KeyCode = Keys.T Then
+            Button3.PerformClick()
+        End If
     End Sub
 End Class
