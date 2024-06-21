@@ -3,6 +3,7 @@ Imports System.Text
 Imports System.Threading.Tasks
 Imports Newtonsoft.Json
 Imports System.Diagnostics
+Imports System.Text.RegularExpressions
 
 Imports GoogleForm.Submission
 
@@ -23,7 +24,6 @@ Public Class CreateSubmissionForm
 
     Private Sub CreateSubmissionForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.KeyPreview = True
-        Me.Text = "John Doe, Slidely Task 2 - Create Submission"
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click, MyBase.Click
@@ -44,10 +44,35 @@ Public Class CreateSubmissionForm
     End Sub
 
     Private Async Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click, MyBase.Click
-        Dim name = Controls("txtName").Text
-        Dim email = Controls("txtEmail").Text
-        Dim phone = Controls("txtPhone").Text
-        Dim github = Controls("txtGithub").Text
+        Dim name = Controls("txtName").Text.Trim()
+        Dim email = Controls("txtEmail").Text.Trim()
+        Dim phone = Controls("txtPhone").Text.Trim()
+        Dim github = Controls("txtGithub").Text.Trim()
+
+
+        If name.Length <= 3 Then
+            MessageBox.Show("Name must be greater than 3 characters.")
+            Return
+        End If
+
+        Dim emailRegex As New Regex("^[^@\s]+@[^@\s]+\.[^@\s]+$")
+        If Not emailRegex.IsMatch(email) Then
+            MessageBox.Show("Please enter a valid email address.")
+            Return
+        End If
+
+        Dim phoneRegex As New Regex("^\d{10}$")
+        If Not phoneRegex.IsMatch(phone) Then
+            MessageBox.Show("Please enter a valid 10-digit Indian mobile number.")
+            Return
+        End If
+
+        Dim githubRegex As New Regex("^https:\/\/github\.com\/[A-Za-z0-9._%+-]+\/?$")
+        If Not githubRegex.IsMatch(github) Then
+            MessageBox.Show("Please enter a valid GitHub URL.")
+            Return
+        End If
+
         Dim stopwatchTime = stopwatch.Elapsed.ToString("hh\:mm\:ss")
 
         Dim submission As New Submission(name, email, phone, github, stopwatchTime)

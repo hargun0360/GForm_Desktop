@@ -158,7 +158,7 @@ Partial Class CreateSubmissionForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(942, 626)
+        ClientSize = New Size(1063, 626)
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(txtStopwatch)
