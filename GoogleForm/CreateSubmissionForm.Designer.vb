@@ -60,6 +60,7 @@ Partial Class CreateSubmissionForm
         ' 
         txtGithub.Location = New Point(426, 301)
         txtGithub.Name = "txtGithub"
+        txtGithub.PlaceholderText = "Enter GitHub Link"
         txtGithub.Size = New Size(239, 27)
         txtGithub.TabIndex = 22
         ' 
@@ -67,6 +68,7 @@ Partial Class CreateSubmissionForm
         ' 
         txtPhone.Location = New Point(426, 259)
         txtPhone.Name = "txtPhone"
+        txtPhone.PlaceholderText = "Enter Phone Number "
         txtPhone.Size = New Size(239, 27)
         txtPhone.TabIndex = 21
         ' 
@@ -74,6 +76,7 @@ Partial Class CreateSubmissionForm
         ' 
         txtEmail.Location = New Point(426, 214)
         txtEmail.Name = "txtEmail"
+        txtEmail.PlaceholderText = "Enter Email"
         txtEmail.Size = New Size(239, 27)
         txtEmail.TabIndex = 20
         ' 
@@ -82,6 +85,7 @@ Partial Class CreateSubmissionForm
         txtName.BackColor = SystemColors.ButtonHighlight
         txtName.Location = New Point(426, 169)
         txtName.Name = "txtName"
+        txtName.PlaceholderText = "Enter Name "
         txtName.Size = New Size(239, 27)
         txtName.TabIndex = 19
         ' 

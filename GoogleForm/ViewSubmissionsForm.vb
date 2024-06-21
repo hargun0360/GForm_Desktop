@@ -3,6 +3,7 @@ Imports System.Threading.Tasks
 Imports Newtonsoft.Json
 
 Imports GoogleForm.Submission
+Imports System.Text
 Public Class ViewSubmissionsForm
 
     Private currentIndex As Integer = 0
@@ -46,6 +47,38 @@ Public Class ViewSubmissionsForm
         End If
     End Function
 
+    Private Async Sub BtnEditSubmission_Click(sender As Object, e As EventArgs) Handles BtnEditSubmission.Click, BtnEditSubmission.Click
+        Dim name = Controls("txtName").Text
+        Dim email = Controls("txtEmail").Text
+        Dim phone = Controls("txtPhone").Text
+        Dim github = Controls("txtGithub").Text
+        Dim stopwatchTime = Controls("txtStopwatch").Text
+
+        Dim submission As New Submission(name, email, phone, github, stopwatchTime)
+        Dim jsonData = JsonConvert.SerializeObject(submission)
+
+        Dim content As New StringContent(jsonData, Encoding.UTF8, "application/json")
+        Dim response = Await client.PutAsync($"api/update?index={currentIndex}", content)
+        If response.IsSuccessStatusCode Then
+            MessageBox.Show("Submission updated!")
+            Await DisplayCurrentSubmission()
+        Else
+            MessageBox.Show("Failed to update submission: " & response.ReasonPhrase)
+        End If
+    End Sub
+
+    Private Async Sub BtnDeleteSubmission_Click(sender As Object, e As EventArgs) Handles BtnDeleteSubmission.Click, BtnDeleteSubmission.Click
+        Dim response = Await client.DeleteAsync($"api/delete?index={currentIndex}")
+        If response.IsSuccessStatusCode Then
+            MessageBox.Show("Submission deleted!")
+            If currentIndex > 0 Then
+                currentIndex -= 1
+            End If
+            Await DisplayCurrentSubmission()
+        Else
+            MessageBox.Show("Failed to delete submission: " & response.ReasonPhrase)
+        End If
+    End Sub
     Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, MyBase.Click
 
         If currentIndex > 0 Then
@@ -70,6 +103,10 @@ Public Class ViewSubmissionsForm
             Button1.PerformClick()
         ElseIf e.Control AndAlso e.KeyCode = Keys.N Then
             Button2.PerformClick()
+        ElseIf e.Control AndAlso e.KeyCode = Keys.U Then
+            BtnEditSubmission.PerformClick()
+        ElseIf e.Control AndAlso e.KeyCode = Keys.D Then
+            BtnDeleteSubmission.PerformClick()
         End If
     End Sub
 

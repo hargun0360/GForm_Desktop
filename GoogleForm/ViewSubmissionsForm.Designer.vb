@@ -35,6 +35,8 @@ Partial Class ViewSubmissionsForm
         txtStopwatch = New TextBox()
         Button1 = New Button()
         Button2 = New Button()
+        BtnEditSubmission = New Button()
+        BtnDeleteSubmission = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -99,10 +101,9 @@ Partial Class ViewSubmissionsForm
         ' 
         ' txtName
         ' 
-        txtName.BackColor = SystemColors.Control
+        txtName.BackColor = Color.White
         txtName.Location = New Point(419, 128)
         txtName.Name = "txtName"
-        txtName.ReadOnly = True
         txtName.Size = New Size(239, 27)
         txtName.TabIndex = 6
         ' 
@@ -110,7 +111,6 @@ Partial Class ViewSubmissionsForm
         ' 
         txtEmail.Location = New Point(419, 169)
         txtEmail.Name = "txtEmail"
-        txtEmail.ReadOnly = True
         txtEmail.Size = New Size(239, 27)
         txtEmail.TabIndex = 7
         ' 
@@ -118,7 +118,6 @@ Partial Class ViewSubmissionsForm
         ' 
         txtPhone.Location = New Point(419, 214)
         txtPhone.Name = "txtPhone"
-        txtPhone.ReadOnly = True
         txtPhone.Size = New Size(239, 27)
         txtPhone.TabIndex = 8
         ' 
@@ -126,7 +125,6 @@ Partial Class ViewSubmissionsForm
         ' 
         txtGithub.Location = New Point(419, 256)
         txtGithub.Name = "txtGithub"
-        txtGithub.ReadOnly = True
         txtGithub.Size = New Size(239, 27)
         txtGithub.TabIndex = 9
         ' 
@@ -162,11 +160,35 @@ Partial Class ViewSubmissionsForm
         Button2.Text = "NEXT (CTRL + N)"
         Button2.UseVisualStyleBackColor = False
         ' 
+        ' BtnEditSubmission
+        ' 
+        BtnEditSubmission.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
+        BtnEditSubmission.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnEditSubmission.Location = New Point(217, 438)
+        BtnEditSubmission.Name = "BtnEditSubmission"
+        BtnEditSubmission.Size = New Size(184, 29)
+        BtnEditSubmission.TabIndex = 13
+        BtnEditSubmission.Text = "UPDATE (CTRL + U)"
+        BtnEditSubmission.UseVisualStyleBackColor = False
+        ' 
+        ' BtnDeleteSubmission
+        ' 
+        BtnDeleteSubmission.BackColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
+        BtnDeleteSubmission.Font = New Font("STZhongsong", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        BtnDeleteSubmission.Location = New Point(538, 438)
+        BtnDeleteSubmission.Name = "BtnDeleteSubmission"
+        BtnDeleteSubmission.Size = New Size(172, 29)
+        BtnDeleteSubmission.TabIndex = 14
+        BtnDeleteSubmission.Text = "DELETE (CTRL + D)"
+        BtnDeleteSubmission.UseVisualStyleBackColor = False
+        ' 
         ' ViewSubmissionsForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(935, 458)
+        ClientSize = New Size(1105, 546)
+        Controls.Add(BtnDeleteSubmission)
+        Controls.Add(BtnEditSubmission)
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(txtStopwatch)
@@ -200,4 +222,6 @@ Partial Class ViewSubmissionsForm
     Friend WithEvents txtStopwatch As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents BtnEditSubmission As Button
+    Friend WithEvents BtnDeleteSubmission As Button
 End Class
